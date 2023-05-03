@@ -8,5 +8,5 @@ Here, you can see what I am talking about:
 https://roadmap.sh/react <br />
 
 So far, I learned too many things like basik hooks (useState, useEffect), rendering in react, props, custom hooks, useMemo, useCallback, useRef, react router and conditional rendering. <br />
-And now, I am currently learning about useContext and useReducer hooks.
+And now, I am learning about useContext and useReducer hooks.
 
