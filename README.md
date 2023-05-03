@@ -3,7 +3,7 @@
 Simply I am a student who wants to learn.
 In this case, I'll learn all about react and I'll be updating this repo with apps that I am building :)
 <br />
-To become a strong React Developer, I am following the Road Map provided by the website roadmap.sh<br />
+In order to become a strong React Developer, I am following the Road Map provided by the website roadmap.sh<br />
 Here, you can see what I am talking about:
 https://roadmap.sh/react <br />
 
