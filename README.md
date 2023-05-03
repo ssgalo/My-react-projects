@@ -7,6 +7,6 @@ To become a strong React Developer, I am following the Road Map provided by the 
 Here, you can see what I am talking about:
 https://roadmap.sh/react <br />
 
-Until now, I learned too many things like basik hooks (useState, useEffect), rendering in react, custom hooks, props, react router and conditional rendering. <br />
+Until now, I learned too many things like basik hooks (useState, useEffect), rendering in react, props, custom hooks, useMemo, useCallback, useRef, react router and conditional rendering. <br />
 And now, I am currently learning about useContext and useReducer hooks.
 
