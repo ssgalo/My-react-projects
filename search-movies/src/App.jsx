@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import './App.css'
 import { Movies } from './components/Movies'
+import debounce from "just-debounce-it";
 
 const API_KEY = "4b414285"
 
@@ -33,11 +34,12 @@ function useMovies({search}){
 const searchMovies = async ({search}) => {
   if(search === '') return null
 
+  console.log(search)
   try{
     const response = await fetch(`https://www.omdbapi.com/?s=${search}&apikey=${API_KEY}`)
     const json = await response.json()
 
-    const movies = json.search
+    const movies = json.Search
     
     return movies?.map(movie => ({
       id: movie.imdbID,
@@ -57,8 +59,16 @@ function App() {
   const [error, setError] = useState("")
   const isFirstInput = useRef(true)
 
+  const debouncedGetMovies = useCallback(
+    debounce(search => {
+      getMovies({ search })
+    }, 300)
+    , [getMovies]
+  )
+
   const handleChange = (e) => {
     setSearch(e.target.value)
+    debouncedGetMovies(e.target.value)
   }
 
   const handleSubmit = (e) => {
