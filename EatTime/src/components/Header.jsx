@@ -27,15 +27,14 @@ export const Header = () => {
 
     return(
         <div>
-        <div className="container pt-5">
-            <h5 className="mb-4 header-text">¿Qué querés hacer?</h5>
-            <div className="to-do-container">
-                {actions.map(action => {
-                    return ( <Card key={action.id} color={action.color} text={action.text}/> )
-                })}
+            <div className="container pt-5">
+                <h5 className="mb-4 header-text">¿Qué querés hacer?</h5>
+                <div className="to-do-container">
+                    {actions.map(action => {
+                        return ( <Card key={action.id} color={action.color} text={action.text}/> )
+                    })}
+                </div>
             </div>
-        </div>
-       
         </div>
     )
 }
