@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react"
+import { useFilters } from "../hooks/useFilters.js"
 
-export const Filters = ({setFilters}) => {
-    const [minValue, setMinValue] = useState(1)
+export const Filters = () => {
+    const {filters, setFilters} = useFilters()
     
     const handleChange = (e) => {
-        setMinValue(e.target.value)
-
         setFilters(prevState => ({
             ...prevState,
             minPrice:e.target.value
@@ -21,7 +19,7 @@ export const Filters = ({setFilters}) => {
                 max={3000}    
                 onChange={handleChange}
             />
-            <p>{minValue}</p>
+            <p>{filters.minPrice}</p>
         </form>
     )
 }
