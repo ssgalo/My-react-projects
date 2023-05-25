@@ -1,11 +1,11 @@
 .title-navbar{
   font-weight: 700;
   font-style: italic;
-  color:rgb(17, 155, 17);
+  color:#FF441F;
 }
 
 .title-navbar:hover{
-  color:rgb(17, 155, 17) !important;
+  color:#FF441F !important;
 }
 
 .shadow-nav{
@@ -50,8 +50,6 @@ background-color: #FF441F;;
   background-color: #007AFF;
 }
 
-
-
 .to-do-header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -79,6 +77,10 @@ background-color: #FF441F;;
 .header-text{
   font-weight: bold;
   font-size:35px;
+}
+
+.elements-container{
+  width: 100%;
 }
 
 @media (max-width: 768px){

@@ -9,17 +9,17 @@ export const Header = () => {
     const actions = [
         {
             color:"red",
-            text:"Nuevo pedido",
+            text:"Hamburguesa",
             id:1
         },
         {
             color:"green",
-            text:"Ver pedidos actuales",
+            text:"Hamburguesa",
             id:2
         },
         {
             color:"blue",
-            text:"Ver histórico",
+            text:"Hamburguesa",
             id:3
         }
     ]
@@ -28,7 +28,7 @@ export const Header = () => {
     return(
         <div>
             <div className="container pt-5">
-                <h5 className="mb-4 header-text">¿Qué querés hacer?</h5>
+                <h5 className="mb-4 header-text">¿Qué vas a pedir hoy, Santiago?</h5>
                 <div className="to-do-container">
                     {actions.map(action => {
                         return ( <Card key={action.id} color={action.color} text={action.text}/> )

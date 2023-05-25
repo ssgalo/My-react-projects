@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "metro4-react": "^0.1.4",
     "mongodb": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
