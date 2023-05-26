@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*#1E1E1E*/
+body {
+    background-color: #161616 !important;
+}
+
+.aside-container{
+    margin: 22px 16px;
+    background-color: #1E1E1E;
+    height: 100vh;
+    width: 300px;
+    border-radius: 32px;
+}
+
+.aside-title {
+    padding:15px;
+}
+
+.ul-container{
+    padding:10px;
+}
+
+.li-container{
+    display: flex;
+    justify-content: center;
+}
+
+.li-container button{
+    border-radius: 32px;
+}
+
+.section-container{
+    display: flex;
+}
+
+.players-container{
+    padding:32px;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.stars{
+    display: flex;
+}
