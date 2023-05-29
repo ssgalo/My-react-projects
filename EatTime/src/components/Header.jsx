@@ -6,32 +6,87 @@ import { TakeOrder } from "./TakeOrder"
 
 export const Header = () => {
 
-    const actions = [
+    const food = [
         {
             color:"red",
             text:"Hamburguesa",
-            id:1
+            id:1,
+            url: "src/assets/images/Hamburguer.png"
         },
         {
             color:"green",
-            text:"Hamburguesa",
-            id:2
+            text:"Milanesa",
+            id:2,
+            url: "src/assets/images/milanesa.png"
         },
         {
             color:"blue",
-            text:"Hamburguesa",
-            id:3
+            text:"Pizza",
+            id:3,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:4,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:5,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:6,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:7,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:8,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:9,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:10,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:11,
+            url: "src/assets/images/pizza.png"
+        },
+        {
+            color:"blue",
+            text:"Pizza",
+            id:12,
+            url: "src/assets/images/pizza.png"
         }
     ]
-
-
     return(
         <div>
             <div className="container pt-5">
                 <h5 className="mb-4 header-text">¿Qué vas a pedir hoy, Santiago?</h5>
                 <div className="to-do-container">
-                    {actions.map(action => {
-                        return ( <Card key={action.id} color={action.color} text={action.text}/> )
+                    {food.map(element => {
+                        return ( <Card key={element.id} color={element.color} text={element.text} url={element.url} id={element.id}/> )
                     })}
                 </div>
             </div>

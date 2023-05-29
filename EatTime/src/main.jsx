@@ -4,6 +4,7 @@ import App from './App'
 import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
 import './index.css'
 import { TakeOrder } from './components/TakeOrder'
+import { Order } from './components/Order'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/takeOrder",
     element: <TakeOrder />
+  },
+  {
+    path: "/order",
+    element: <Order/>
   }
 ]);
 
