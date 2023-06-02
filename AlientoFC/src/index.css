@@ -33,7 +33,10 @@ body {
 }
 
 .section-container{
+    padding-top:48px;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .players-container{
