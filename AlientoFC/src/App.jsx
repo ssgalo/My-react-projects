@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import { FormAddPlayer } from './components/FormAddPlayer';
 import { PopUpDelete } from './components/PopUpDelete';
 import { FormEditPlayer } from './components/FormEditPlayer';
+import { Routes, Route } from 'react-router';
+import { TeamMaker } from './components/TeamMaker';
 
 
 function App() {
@@ -37,8 +39,15 @@ function App() {
     <div className="app-container">
       <Navbar></Navbar>
       <section className='section-container'>
-        <TablePlayers players={players} activatePopUpDelete={activatePopUpDelete} activatePopUpEdit={activatePopUpEdit}></TablePlayers>
-        <ActionButtons setPopUp={setPopUp}></ActionButtons>
+        <Routes>
+          <Route path="/" element={<TablePlayers players={players} 
+            activatePopUpDelete={activatePopUpDelete} 
+            activatePopUpEdit={activatePopUpEdit} 
+            setPopUp={setPopUp}></TablePlayers>}>
+          </Route>
+          <Route path="/armado" element={<TeamMaker></TeamMaker>}></Route>
+        </Routes>
+        
         <FormAddPlayer popUp={popUp} setPopUp={setPopUp} setPlayers={setPlayers} players={players}></FormAddPlayer>
         <PopUpDelete popUp={popUpDelete} setPopUp={setPopUpDelete} id={idPlayerToDelete} players={players} handleRemovePlayer={handleRemovePlayer}></PopUpDelete>
         <FormEditPlayer popUp={popUpEdit} setPopUp={setPopUpEdit} setPlayers={setPlayers} players={players} id={idPlayerToEdit}></FormEditPlayer>
