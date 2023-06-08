@@ -1,36 +1,42 @@
-import { Player } from "./Player"
+export const Players = ({players, activatePopUpDelete, activatePopUpEdit}) => {
+    
+    const handleRemove = (id) => {
+        activatePopUpDelete(id)
+    }
 
-export const Players = () => {
+    const handleEdit = (id) => {
+        activatePopUpEdit(id)
+    }
+
     return (
-        
-            <div className="players-container relative overflow-x-auto">
-                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                Jugador
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Puntaje
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Votaste
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Clear
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <Player></Player>
-                        <Player></Player>
-                        <Player></Player>
-                        <Player></Player>
-                        <Player></Player>
-                        <Player></Player>
-                        <Player></Player>
-                    </tbody>
-                </table>
-            </div>     
+        <>
+            { players.map(player => {
+                return (
+                    <tr className="border-b dark:bg-gray-900 dark:border-gray-700" key={player.id}>
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {player.name}
+                        </th>
+                        <td className="px-6 py-4">
+                        {player.score}
+                        </td>
+                        <td className="px-6 py-4">
+                        {player.style}
+                        </td>
+                        <td className="px-6 py-4 contenedor-icon">
+                            <div className="edit-icon" onClick={() => {
+                                handleEdit(player.id)
+                            }}>
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </div>
+                            <div className="delete-icon" onClick={() => {
+                                handleRemove(player.id)
+                            }}>
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                )
+            })}
+        </>
     )
 }

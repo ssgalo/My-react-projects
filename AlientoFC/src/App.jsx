@@ -1,18 +1,48 @@
 import './App.css'
 import { Navbar } from './components/Navbar'
-import { Aside } from './components/Aside'
-import { Players } from './components/Players'
 import { TablePlayers } from './components/TablePlayers'
+import { ActionButtons } from './components/ActionButtons'
+import { players as initialPlayers } from "./mocks/players.json";
+import { useEffect, useState } from 'react';
+import { FormAddPlayer } from './components/FormAddPlayer';
+import { PopUpDelete } from './components/PopUpDelete';
+import { FormEditPlayer } from './components/FormEditPlayer';
+
 
 function App() {
 
+  const [players, setPlayers] =  useState(initialPlayers)
+  const [popUp, setPopUp] = useState(false)
+  const [popUpDelete, setPopUpDelete] = useState(false)
+  const [popUpEdit, setPopUpEdit] = useState(false)
+  const [idPlayerToDelete, setIdPlayerToDelete] = useState(-1)
+  const [idPlayerToEdit, setIdPlayerToEdit] = useState(-1)
+
+  const handleRemovePlayer = (id) => {
+    const updatedPlayers = players.filter((player) => player.id !== id)
+    setPlayers(updatedPlayers)
+  }
+
+  const activatePopUpDelete = (id) => {
+    setIdPlayerToDelete(id)
+    setPopUpDelete(true)
+  }
+
+  const activatePopUpEdit = (id) => {
+    setIdPlayerToEdit(id)
+    setPopUpEdit(true)
+  }
+  
   return (
     <div className="app-container">
       <Navbar></Navbar>
       <section className='section-container'>
-        <TablePlayers></TablePlayers>
+        <TablePlayers players={players} activatePopUpDelete={activatePopUpDelete} activatePopUpEdit={activatePopUpEdit}></TablePlayers>
+        <ActionButtons setPopUp={setPopUp}></ActionButtons>
+        <FormAddPlayer popUp={popUp} setPopUp={setPopUp} setPlayers={setPlayers} players={players}></FormAddPlayer>
+        <PopUpDelete popUp={popUpDelete} setPopUp={setPopUpDelete} id={idPlayerToDelete} players={players} handleRemovePlayer={handleRemovePlayer}></PopUpDelete>
+        <FormEditPlayer popUp={popUpEdit} setPopUp={setPopUpEdit} setPlayers={setPlayers} players={players} id={idPlayerToEdit}></FormEditPlayer>
       </section>
-      
     </div>
   )
 }

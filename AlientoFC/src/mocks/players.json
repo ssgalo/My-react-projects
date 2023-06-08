@@ -2,45 +2,57 @@
   "players": [
     {
       "name": "Fede Rojas",
-      "score": 100,
-      "goals": 0,
+      "score": 50,
+      "goals": 2,
       "assists": 0,
-      "style": ""
+      "style": "Defensivo",
+      "juega": true,
+      "id":1
     },
     {
-      "name": "Fede Rojas",
-      "score": 100,
-      "goals": 0,
-      "assists": 0,
-      "style": ""
+      "name": "Santi Galo",
+      "score": 95,
+      "goals": 1,
+      "assists": 1,
+      "style": "Ofensivo Rápido",
+      "juega": true,
+      "id":2
     },
     {
-      "name": "Fede Rojas",
-      "score": 100,
-      "goals": 0,
+      "name": "Nico Rojas",
+      "score": 70,
+      "goals": 2,
       "assists": 0,
-      "style": ""
+      "style": "Visión amplia",
+      "juega": true,
+      "id":3
     },
     {
-      "name": "Fede Rojas",
-      "score": 100,
-      "goals": 0,
+      "name": "Mati Caputo",
+      "score": 75,
+      "goals": 3,
       "assists": 0,
-      "style": ""
+      "style": "Delantero Goleador",
+      "juega": true,
+      "id":4
     },
     {
-      "name": "Fede Rojas",
-      "score": 100,
+      "name": "Mateo Poleiko",
+      "score": 80,
       "goals": 0,
       "assists": 0,
-      "style": ""
+      "style": "Nobody knows",
+      "juega": true,
+      "id":5
     },
     {
-      "name": "Fede Rojas",
+      "name": "Lucas Poleiko",
       "score": 100,
       "goals": 0,
       "assists": 0,
-      "style": ""
+      "style": "Ofensivo Rápido",
+      "juega": true,
+      "id":6
     }
   ]
 }

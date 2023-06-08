@@ -33,9 +33,12 @@ body {
 }
 
 .section-container{
+    position: absolute;
     padding-top:48px;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -50,3 +53,143 @@ body {
 .stars{
     display: flex;
 }
+
+.btn-container{
+    padding-top:16px;
+    display: flex;
+    justify-content: center;
+    gap:16px;
+    padding-bottom:16px;
+}
+
+.pop-up-container{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.form-popup-container{
+    margin-top:70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pop-up-delete-container{
+    margin-top:70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bg-form{
+    min-width: 300px;
+    background-color: #2D3236;
+    padding:32px;
+    border-radius: 32px;
+}
+
+.two-elements-container{
+    display: flex;
+    gap: 16px;
+}
+
+.form-popup-btn-container{
+    display: flex;
+    justify-content: center;
+    gap:16px;
+}
+
+.no-pop-up{
+    display: none;
+}
+
+.edit-icon > ion-icon{
+  font-size: 28px;
+  color:#7E22CE
+}
+
+.warning-icon{
+    display: flex;
+    justify-content: center;
+    gap:20px
+}
+
+.warning-icon > ion-icon{
+    font-size: 64px;
+    color:#B04759
+}
+
+.edit-icon > ion-icon:hover{
+    color:rgba(126, 34, 206, .8);
+    cursor:pointer
+  }
+
+.delete-icon > ion-icon{
+    font-size: 28px;
+    color:#B04759
+  }
+
+.delete-icon > ion-icon:hover{
+    cursor: pointer;
+    color:rgba(176, 71, 89, .8)
+}
+
+.contenedor-icon{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.text-content-popup-delete{
+    margin-top:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-content-popup-delete h6{
+    color:#ffffff;
+    font-size: 18px;
+}
+
+.text-content-popup-delete p{
+    margin-top:8px;
+    padding: 5px 10px;
+    font-size: 24px;
+    color:#ffffff
+}
+
+.button-content-popup-delete{
+    margin-top:24px;
+    display: flex;
+    justify-content: center;
+    gap:16px;
+}
+
+.delete-player-img{
+    margin-top:10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
