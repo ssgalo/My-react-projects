@@ -45,7 +45,7 @@ function App() {
             activatePopUpEdit={activatePopUpEdit} 
             setPopUp={setPopUp}></TablePlayers>}>
           </Route>
-          <Route path="/armado" element={<TeamMaker></TeamMaker>}></Route>
+          <Route path="/armado" element={<TeamMaker setPlayers={setPlayers} players={players}></TeamMaker>}></Route>
         </Routes>
         
         <FormAddPlayer popUp={popUp} setPopUp={setPopUp} setPlayers={setPlayers} players={players}></FormAddPlayer>

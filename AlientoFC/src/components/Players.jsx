@@ -13,16 +13,16 @@ export const Players = ({players, activatePopUpDelete, activatePopUpEdit}) => {
             { players.map(player => {
                 return (
                     <tr className="border-b dark:bg-gray-900 dark:border-gray-700" key={player.id}>
-                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <th scope="row" className="responsive-cell px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {player.name}
                         </th>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 responsive-cell">
                         {player.score}
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 display-none responsive-cell">
                         {player.style}
                         </td>
-                        <td className="px-6 py-4 contenedor-icon">
+                        <td className="responsive-cell px-6 py-4 contenedor-icon">
                             <div className="edit-icon" onClick={() => {
                                 handleEdit(player.id)
                             }}>
